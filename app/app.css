@@ -1,0 +1,62 @@
+/* app css stylesheet */
+.logo {
+  font-size: 40px;
+  color: lightgray;
+}
+
+.logo:hover {
+  color: lightgray;
+}
+
+header ul.nav.navbar-nav {
+  float: right;
+}
+
+nav.navbar.navbar-default {
+  margin: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+  text-decoration: none;
+  color: #007bff;
+  padding: 15px 20px;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #007bff;
+  border-radius: 3px;
+}
+.formwrapper {
+  border: 1px solid #f5f5f9;
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 20px 15px;
+}
+
+.formwrapper label {
+  color: #777777;
+  font-weight: normal;
+}
+
+.mandatory {
+  color: red;
+}
+
+.title {
+  margin: 0;
+  background-color: #f5f5f9;
+  color: #777777;
+  padding: 10px 20px;
+  clear: both;
+}
+
+p.title a {
+  text-decoration: none;
+}
+
+.btn-wrapper {
+  padding-left: 0;
+}
+

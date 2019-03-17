@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="row">
+      <p class="title">Payment Details Form</p>  
+      <div class="col-xs-12 formwrapper" ng-controller="paymentDetailsCtrl">
+        <form class="form-horizontal" ng-submit="paymentDescription()">
+            <!-- <div class="form-group">
+                <label for="Sender" class="col-xs-2">Sender</label>
+                <div class="col-xs-4">
+                    <select id="Sender" class="form-control" ng-model="Sender" required>
+                        <option value="Shreesha">Shreesha</option>
+                        <option value="Sangam">Sangam</option>
+                        <option value="Shivanshu">Shivanshu</option>
+                        <option value="Sreekanth">Sreekanth</option>
+                        <option value="Vinoth">Vinoth</option>
+                    </select>
+                </div>
+            </div> -->
+
+            <div class="form-group">
+                <label for="Payee" class="col-xs-2">Payee<span class="mandatory">*</span></label>
+                <div class="col-xs-4">
+                    <select id="Payee" class="form-control" ng-model="Payee" required>
+                        <option value="" selected="selected">Choose Payee</option>
+                        <option value="Shreesha">Shreesha</option>
+                        <option value="Sangam">Sangam</option>
+                        <option value="Shivanshu">Shivanshu</option>
+                        <option value="Sreekanth">Sreekanth</option>
+                        <option value="Vinoth">Vinoth</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="trans_desc" class="col-xs-2">Transaction Description<span class="mandatory">*</span></label>
+                <div class="col-xs-4">
+                <input type="text" class="form-control" id="trans_desc" ng-model="trans_desc" placeholder="Transaction Description" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="spend_category" class="col-xs-2">Spend Category<span class="mandatory">*</span></label>
+                <div class="col-xs-4">
+                    <select id="spend_category" class="form-control" ng-model="spend_category" required>
+                        <option value="" selected="selected">Choose Spend Category</option>
+                        <option value="Medical">Medical</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Loans">Loans</option>
+                        <option value="Utility Bill">Utility Bills</option>
+                        <option value="Education">Education</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Misc">Misc</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <label for="amount" class="col-xs-2">Amount<span class="mandatory">*</span></label>
+                <div class="col-xs-4">
+                <input type="number" class="form-control" id="amount" ng-model="amount" placeholder="Amount" />
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <label for="date" class="col-xs-2">Date<span class="mandatory">*</span></label>
+                <div class="col-xs-4">
+                <input type="date" class="form-control" min="2000-01-02" id="date" ng-model="date" placeholder="Date" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="payment_type" class="col-xs-2">Payment Type<span class="mandatory">*</span></label>
+                <div class="col-xs-4">
+                    <select id="payment_type" class="form-control" ng-model="payment_type" required>
+                        <option value="" selected="selected">Choose Payment Type</option>
+                        <option value="Debit">Debit</option>
+                        <option value="Credit">Credit</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="col-xs-10 btn-wrapper">
+                <button type="submit" class="btn btn-primary">Submit</button> 
+                <button type="reset" class="btn btn-default">Reset</button>
+            </div>
+        </form>  
+      </div>
+    </div>
+</div>

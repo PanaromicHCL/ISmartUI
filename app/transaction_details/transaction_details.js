@@ -55,7 +55,7 @@ angular.module('myApp.transaction_details', ['ngRoute'])
 .controller('transactionDetailsCtrl', function($scope, $http) {
   $scope.displayDateFlag = false;
 
-  $scope.transList = transactionsList;
+  // $scope.transList = transactionsList;
   // console.log(JSON.stringify($scope.transList));
 
   $scope.showDate = function() {
@@ -74,6 +74,7 @@ angular.module('myApp.transaction_details', ['ngRoute'])
 
     $http.get("http://13.234.59.233:8085/ISmart/api/listTransaction?" + reqObject)
     .then(function (response) {
+        $scope.transList = response;
         console.log("Data has been submitted successfully:" + response.data);
     });
   }

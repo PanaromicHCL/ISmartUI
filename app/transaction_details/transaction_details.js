@@ -1,3 +1,48 @@
+'use strict';
+
+var transactionsList = [
+    {
+      amount: "57000",
+      customerId: "1",
+      date: "2009-03-17",
+      paymentType: "Debit",
+      spendCategory: "Education",
+      transactionDescription: "Tesing New Data"
+    },
+    {
+      amount: "27000",
+      customerId: "2",
+      date: "2009-03-12",
+      paymentType: "Credit",
+      spendCategory: "Medical",
+      transactionDescription: "Tesing"
+    },
+    {
+      amount: "176000",
+      customerId: "4",
+      date: "2009-03-19",
+      paymentType: "Debit",
+      spendCategory: "Loans",
+      transactionDescription: "New Data"
+    },
+    {
+      amount: "257000",
+      customerId: "4",
+      date: "2009-03-28",
+      paymentType: "Credit",
+      spendCategory: "Shopping",
+      transactionDescription: "Data Fill"
+    },
+    {
+      amount: "57000",
+      customerId: "1",
+      date: "2009-03-17",
+      paymentType: "Debit",
+      spendCategory: "Education",
+      transactionDescription: "Tesing New Data"
+    }
+];
+
 angular.module('myApp.transaction_details', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
@@ -8,7 +53,28 @@ angular.module('myApp.transaction_details', ['ngRoute'])
 }])
 
 .controller('transactionDetailsCtrl', function($scope, $http) {
-  var displayDateFlag = "false";
+  $scope.displayDateFlag = false;
+  var reqOject  = "";
 
-  console.log
+  $scope.transList = transactionsList;
+  console.log(JSON.stringify($scope.transList));
+
+  $scope.showDate = function() {
+    if ($scope.Category === "Periodically") {
+      $scope.displayDateFlag = true;
+    }
+    else {
+      $scope.displayDateFlag = false;
+    }
+  }  
+
+  $scope.transactionList = function() {
+    // $scope.transList = transactionsList;
+    // console.log(JSON.stringify($scope.transList));
+
+    // $http.get("http://13.234.59.233:8083/ISmart/api/makeTransaction", paymentObject)
+    // .then(function (response) {
+    //     console.log("Data has been submitted successfully:" + response);
+    // });
+  }
 });

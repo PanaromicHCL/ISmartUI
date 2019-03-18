@@ -50,7 +50,7 @@ angular.module('myApp.payment_details', ['ngRoute'])
         //    alert("Data has been submitted successfully:" + response);
         // });
 
-        $http.post("http://13.234.59.233:8083/ISmart/api/makeTransaction", paymentObject)
+        $http.post("http://13.234.59.233:8084/ISmart/api/makeTransaction", paymentObject)
         .then(function (response) {
             console.log("Data has been submitted successfully:" + response);
         });

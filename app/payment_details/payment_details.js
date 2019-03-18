@@ -7,7 +7,7 @@ angular.module('myApp.payment_details', ['ngRoute'])
   });
 }])
 
-.controller('paymentDetailsCtrl', function($scope, dateFilter, $location, $http) {
+.controller('paymentDetailsCtrl', function($scope, dateFilter, $http) {
     // var now = new Date();
     // var minDate = now.toISOString().substring(0,10);
     // $scope.date = {

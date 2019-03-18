@@ -7,11 +7,8 @@ angular.module('myApp.transaction_details', ['ngRoute'])
   });
 }])
 
-.controller('transactionDetailsCtrl', function($scope, $location, $http) {
+.controller('transactionDetailsCtrl', function($scope, $http) {
+  var displayDateFlag = "false";
 
-    // $http.get(APP_BASE_URL + "/pets")
-    // .then(function(response) {
-    //     $scope.petsList = response.data;
-    // });
-
+  console.log
 });

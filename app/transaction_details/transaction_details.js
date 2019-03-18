@@ -54,10 +54,9 @@ angular.module('myApp.transaction_details', ['ngRoute'])
 
 .controller('transactionDetailsCtrl', function($scope, $http) {
   $scope.displayDateFlag = false;
-  var reqOject  = "";
 
   $scope.transList = transactionsList;
-  console.log(JSON.stringify($scope.transList));
+  // console.log(JSON.stringify($scope.transList));
 
   $scope.showDate = function() {
     if ($scope.Category === "Periodically") {
@@ -69,12 +68,13 @@ angular.module('myApp.transaction_details', ['ngRoute'])
   }  
 
   $scope.transactionList = function() {
-    // $scope.transList = transactionsList;
-    // console.log(JSON.stringify($scope.transList));
+    var reqObject  = "period=" +  $scope.Category + "&spendCategory=" + $scope.spend_category;
 
-    // $http.get("http://13.234.59.233:8083/ISmart/api/makeTransaction", paymentObject)
-    // .then(function (response) {
-    //     console.log("Data has been submitted successfully:" + response);
-    // });
+    // console.log("Data:" + reqObject);
+
+    $http.get("http://13.234.59.233:8085/ISmart/api/listTransaction?" + reqObject)
+    .then(function (response) {
+        console.log("Data has been submitted successfully:" + response.data);
+    });
   }
 });

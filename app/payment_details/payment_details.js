@@ -41,7 +41,7 @@ angular.module('myApp.payment_details', ['ngRoute'])
             "transactionDescription": $scope.trans_desc
         }
 
-        console.log("Payment Object" + JSON.stringify(paymentObject));
+        // console.log("Payment Object" + JSON.stringify(paymentObject));
 
         // $http.get("http://10.117.189.212:8081/ISmart/api/makeTransaction" + paymentObject)
         // .then(function(response) {
@@ -50,9 +50,9 @@ angular.module('myApp.payment_details', ['ngRoute'])
         //    alert("Data has been submitted successfully:" + response);
         // });
 
-        $http.post("http://13.234.59.233:8084/ISmart/api/makeTransaction", paymentObject)
+        $http.post("http://13.234.59.233:8085/ISmart/api/makeTransaction", paymentObject)
         .then(function (response) {
-            console.log("Data has been submitted successfully:" + response);
+            alert("Data has been submitted successfully:" + JSON.stringify(response));
         });
     }
 });
